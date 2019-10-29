@@ -20,3 +20,22 @@ http://localhost:8080/validate?stringToValidate=yourstring<br>
 <b>Example Response:</b><br>
 200 OK<br>
 "it is lower case string"<br>
+
+<b>Example Request:</b><br>
+http://localhost:8080/validate?stringToValidate=YOURSTRING<br>
+<b>Example Response:</b><br>
+200 OK<br>
+"it is upper case string"<br>
+
+<b>Example Request:</b><br>
+http://localhost:8080/validate?stringToValidate=@^^%$<br>
+<b>Example Response:</b><br>
+200 OK<br>
+"it is alphanumeric"<br>
+
+
+<b>Example Request:</b><br>
+http://localhost:8080/validate?stringToValidate=@^DSFdssad^%$<br>
+<b>Example Response:</b><br>
+200 OK<br>
+"string with mixed values"<br>
